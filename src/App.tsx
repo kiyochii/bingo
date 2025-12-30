@@ -4,6 +4,7 @@ import './App.css';
 interface BallInfo {
   letter: string;
   colorClass: string;
+  palavra: string;
 }
 
 function App() {
@@ -65,13 +66,13 @@ function App() {
   // ---------------------------
 
   const getBallInfo = (num: number | null): BallInfo => {
-    if (num === null) return { letter: '', colorClass: '' };
+    if (num === null) return { letter: '', colorClass: '', palavra: ''};
     
-    if (num <= 15) return { letter: 'B', colorClass: 'ball-b' };
-    if (num <= 30) return { letter: 'I', colorClass: 'ball-i' };
-    if (num <= 45) return { letter: 'N', colorClass: 'ball-n' };
-    if (num <= 60) return { letter: 'G', colorClass: 'ball-g' };
-    return { letter: 'O', colorClass: 'ball-o' };
+    if (num <= 15) return { letter: 'B', colorClass: 'ball-b' , palavra: 'bola'};
+    if (num <= 30) return { letter: 'I', colorClass: 'ball-i' , palavra: 'impressora'};
+    if (num <= 45) return { letter: 'N', colorClass: 'ball-n' , palavra: 'navio'};
+    if (num <= 60) return { letter: 'G', colorClass: 'ball-g' , palavra: 'gato'};
+    return { letter: 'O', colorClass: 'ball-o' , palavra: 'ovo'};
   };
 
   const drawNumber = (): void => {
@@ -160,8 +161,11 @@ function App() {
                 </div>
               );
             })}
+          
           </div>
+          github.com/kiyochii
         </section>
+        
       </main>
     </div>
   );
